@@ -1,0 +1,64 @@
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-shadow: border-box;
+            color: rgb(240, 218, 218);
+            z-index: 1;
+        }
+        
+        body {
+            background-color: #1f1f38;
+	        line-height: 1.7;
+	        background-image: url(./images/fonds.svg);
+            min-height: 100vh;
+            font-family: "League Spartan", Arial, Helvetica, sans-serif;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            height: 200px;
+            width: 200px;
+            filter: blur(140px);
+        }
+        
+        body::after {
+            content: "";
+            position: fixed;
+            top: 200px;
+            left: 250px;
+            height: 200px;
+            width: 200px;
+            filter: blur(140px);
+        }
+        
+        
+         :root {
+            --color-pri: rgb(73, 32, 241);
+            --color-pri-light: rgba(46, 101, 238, 0.401);
+            --color-sec: rgb(40, 12, 94);
+            --color-sec-light: rgba(5, 13, 29, 0.797);
+            --pc-width: 75%;
+            --tab-width: 90%;
+            --phone-width: 100%;
+        }
+        
+        .container {
+            border-radius: 10px;
+            width: var(--pc-width);
+            color: var(--text-pri);
+            padding: 10px 40px;
+            margin: 5px auto;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 500px) {
+            .container {
+                width: var(--phone-width);
+            }
+        }
